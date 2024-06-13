@@ -1,0 +1,6 @@
+/* Write your CSS here */
+.tab-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}

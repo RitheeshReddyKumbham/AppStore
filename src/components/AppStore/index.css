@@ -1,0 +1,22 @@
+/* Write your CSS here */
+.tabs {
+  display: flex;
+  flex-direction: row;
+}
+.tab-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.apps {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

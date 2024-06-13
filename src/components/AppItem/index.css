@@ -1,0 +1,12 @@
+/* Write your CSS here */
+.app-cont {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 12px;
+}
+.img {
+  height: 80px;
+  width: 80px;
+}
