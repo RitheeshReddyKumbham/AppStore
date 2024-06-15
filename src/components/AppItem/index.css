@@ -20,3 +20,26 @@
   font-size: 20px;
   font-family: 'Bree serif';
 }
+@media (max-width: '576px') {
+  .app-cont {
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 10px;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 8px;
+    text-align: center;
+  }
+  .img {
+    height: 40px;
+    width: 40px;
+  }
+  .head {
+    font-size: 14px;
+    font-family: 'Bree serif';
+  }
+}
