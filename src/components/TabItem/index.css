@@ -4,3 +4,19 @@
   flex-direction: row;
   justify-content: center;
 }
+.tab {
+  background-color: transparent;
+  border-width: 0px;
+  font-size: 26px;
+  color: #7b8794;
+  margin: 10px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.tabActive {
+  color: #2563eb;
+  background-color: transparent;
+  border-width: 0px;
+  font-size: 26px;
+  text-decoration: underline;
+}

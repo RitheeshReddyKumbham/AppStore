@@ -298,6 +298,7 @@ const appsList = [
 // Write your code here
 class AppStore extends Component {
   state = {
+    search: '',
     activeTabId: tabsList[0].tabId,
   }
 
@@ -305,28 +306,48 @@ class AppStore extends Component {
     this.setState({activeTabId: tabValue})
   }
 
-  getFilteredApps = () => {
-    const {activeTabId} = this.state
+  changeSearch = event => {
+    this.setState({search: event.target.value})
+  }
+
+  getFilteredAndSearchedApps = () => {
+    const {search, activeTabId} = this.state
     return appsList.filter(
-      eachAppDetails => eachAppDetails.category === activeTabId,
+      app =>
+        app.category === activeTabId &&
+        app.appName.toLowerCase().includes(search.toLowerCase()),
     )
   }
+
   render() {
-    const {activeTabId} = this.state
-    const filteredApps = this.getFilteredApps()
+    const {activeTabId, search} = this.state
+    const filteredApps = this.getFilteredAndSearchedApps()
 
     return (
       <div className="main">
         <div className="head">
           <h1 className="heading">App Store</h1>
-          <input type="search" onChange={this.changeSearch} />
+          <div className="bar">
+            <input
+              type="search"
+              value={search}
+              onChange={this.changeSearch}
+              className="searchIp"
+              placeholder="Search"
+            />
+            <img
+              className="search-img"
+              src="https://assets.ccbp.in/frontend/react-js/app-store/app-store-search-img.png"
+              alt="search icon"
+            />
+          </div>
         </div>
         <ul className="tabs">
           {tabsList.map(tabDetails => (
             <TabItem
               key={tabDetails.tabId}
               tabDetails={tabDetails}
-              onClick={this.clickTabId}
+              clickTabId={this.clickTabId}
               isActive={tabDetails.tabId === activeTabId}
             />
           ))}

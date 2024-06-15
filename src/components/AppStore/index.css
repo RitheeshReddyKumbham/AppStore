@@ -2,12 +2,7 @@
 .tabs {
   display: flex;
   flex-direction: row;
-}
-.tab-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-around;
 }
 .apps {
   display: flex;
@@ -15,8 +10,41 @@
   justify-content: space-around;
 }
 .main {
+  text-align: center;
+  background-image: linear-gradient(to bottom, #fff1eb, #ace0f9);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 100%;
+  padding: 20px;
+}
+.head {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-content: center;
+}
+.heading {
+  font-size: 60px;
+  font-weight: bold;
+  font-family: 'Bree serif';
+}
+.searchIp {
+  width: 300px;
+  font-size: 20px;
+  background-color: transparent;
+  padding: 5px;
+  margin: 10px;
+}
+.search-img {
+  margin-top: 15px;
+  height: 30px;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+.bar {
+  display: flex;
+  flex-direction: row;
 }
